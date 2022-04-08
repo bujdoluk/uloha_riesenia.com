@@ -1,17 +1,46 @@
 .audit {
   display: flex;
   flex-direction: row; }
+  @media only screen and (max-width: 76.8rem) {
+    .audit {
+      flex-direction: column;
+      margin: 0 auto; } }
+  @media only screen and (max-width: 37.5rem) {
+    .audit {
+      flex-direction: column; } }
   .audit_left {
     width: 49.6rem;
     height: 11.8rem;
     margin-right: 2.3rem;
     font-size: 2.2rem;
     line-height: 4rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .audit_left {
+        width: 60rem;
+        margin-top: 15rem;
+        margin-left: 8rem;
+        text-align: center; } }
+    @media only screen and (max-width: 37.5rem) {
+      .audit_left {
+        width: 30.7rem;
+        height: 16.3rem;
+        margin: 0 auto;
+        font-size: 2.2rem;
+        text-align: left; } }
   .audit_right {
-    width: 38rem;
+    width: 37.5rem;
     height: 7.2rem;
     font-size: 2rem;
     font-weight: bold; }
+    @media only screen and (max-width: 76.8rem) {
+      .audit_right {
+        text-align: center;
+        width: 76.8rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .audit_right {
+        margin: 0 auto;
+        width: 32.3rem;
+        margin-left: 2rem; } }
 
 :root {
   --color-red: #EE325C;
@@ -42,21 +71,27 @@ body {
   font-family: 'Mulish', sans-serif; }
 
 .main {
-  width: 144.4rem; }
+  width: 144.0rem; }
   @media only screen and (max-width: 37.5rem) {
     .main {
       width: 37.5rem; } }
 
 .h1 {
   font-size: 5rem;
-  font-weight: 900; }
+  font-weight: 900;
+  animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; }
   @media only screen and (max-width: 37.5rem) {
     .h1 {
       font-size: 3rem; } }
 
 .h2_32 {
   font-size: 4.8rem;
-  font-weight: 700; }
+  font-weight: 700;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards; }
+  @media only screen and (max-width: 76.8rem) {
+    .h2_32 {
+      font-size: 3.2rem;
+      font-weight: 700; } }
   @media only screen and (max-width: 37.5rem) {
     .h2_32 {
       font-size: 3.2rem;
@@ -64,14 +99,19 @@ body {
 
 .h2_24 {
   font-size: 4.8rem;
-  font-weight: 700; }
+  font-weight: 700;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards; }
   @media only screen and (max-width: 37.5rem) {
     .h2_24 {
       font-size: 2.4rem; } }
 
 .h3 {
   font-size: 3rem;
-  font-weight: 900; }
+  font-weight: 900;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards; }
+  @media only screen and (max-width: 37.5rem) {
+    .h3 {
+      font-size: 2.4rem; } }
 
 .h4 {
   font-size: 2.4rem;
@@ -168,6 +208,9 @@ a:hover {
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 5rem; }
+  @media only screen and (max-width: 37.5rem) {
+    .btn_biggest {
+      width: 28rem; } }
 
 .quotes {
   width: 4.3rem;
@@ -216,6 +259,9 @@ label {
   border-radius: 0.4rem;
   margin-bottom: 3.3rem;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5rem) {
+    .input {
+      width: 28rem; } }
 
 input::placeholder {
   font-size: 1.6rem; }
@@ -228,6 +274,9 @@ input::placeholder {
   border-radius: 0.4rem;
   margin-bottom: 3.3rem;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5rem) {
+    .input_email_number {
+      width: 28rem; } }
 
 textarea {
   width: 46.8rem;
@@ -237,31 +286,72 @@ textarea {
   border: 0;
   border-radius: 0.4rem;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5rem) {
+    textarea {
+      width: 28rem; } }
 
 textarea::placeholder {
   font-weight: 700;
   font-size: 1.6rem; }
+
+/* Animations */
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.8); }
+  100% {
+    opacity: 1;
+    transform: none; } }
 
 .container {
   width: 92rem;
   margin: 0 auto;
   margin-top: 7.5rem;
   margin-bottom: 20.5rem; }
+  @media only screen and (max-width: 76.8rem) {
+    .container {
+      margin: 0; } }
   @media only screen and (max-width: 37.5rem) {
     .container {
       width: 37.5rem; } }
   .container_info {
     display: flex;
     flex-direction: row; }
+    @media only screen and (max-width: 37.5rem) {
+      .container_info {
+        flex-direction: column;
+        height: 90rem; } }
     .container_info .info {
       display: flex;
       flex-direction: column;
       margin-right: 8.3rem; }
+      @media only screen and (max-width: 37.5rem) {
+        .container_info .info {
+          width: 33rem;
+          margin-left: 2rem;
+          margin-top: 16rem;
+          font-size: 2rem; } }
       .container_info .info_top {
         width: 43.1rem;
         height: 20.1rem;
         line-height: 6.4rem;
         margin-bottom: 3.9rem; }
+        @media only screen and (max-width: 76.8rem) {
+          .container_info .info_top {
+            width: 30rem;
+            font-size: 2rem;
+            margin-left: 3rem;
+            margin-top: 3rem;
+            line-height: 5rem;
+            margin-bottom: 2rem; } }
         @media only screen and (max-width: 37.5rem) {
           .container_info .info_top {
             width: 33rem;
@@ -274,6 +364,11 @@ textarea::placeholder {
         font-size: 2.4rem;
         line-height: 4rem;
         margin-bottom: 8.1rem; }
+        @media only screen and (max-width: 76.8rem) {
+          .container_info .info_bottom {
+            width: 30rem;
+            font-size: 2rem;
+            margin-left: 3rem; } }
         @media only screen and (max-width: 37.5rem) {
           .container_info .info_bottom {
             width: 32rem;
@@ -281,11 +376,39 @@ textarea::placeholder {
             margin: 0 auto;
             margin-bottom: 3.1rem;
             font-size: 2rem; } }
+    @media only screen and (max-width: 76.8rem) {
+      .container_info .features {
+        width: 30rem;
+        font-size: 2rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .container_info .features {
+        margin: 0 auto;
+        width: 30rem;
+        position: absolute;
+        top: 45rem;
+        left: 2.9rem; } }
     .container_info .features_logos {
       display: flex;
       flex-direction: row;
       gap: 4rem;
       margin-bottom: 6.5rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .container_info .features_logos {
+          margin-bottom: 3rem;
+          margin-top: 3rem;
+          display: flex;
+          flex-direction: column; } }
+      @media only screen and (max-width: 37.5rem) {
+        .container_info .features_logos {
+          width: 33rem;
+          flex-direction: row; } }
+      @media only screen and (max-width: 37.5rem) {
+        .container_info .features_logos_img {
+          width: 13rem;
+          flex-direction: row; } }
+    @media only screen and (max-width: 37.5rem) {
+      .container_info .features_container {
+        position: relative; } }
     .container_info .features_container_list {
       list-style: none;
       font-size: 1.8rem;
@@ -296,10 +419,15 @@ textarea::placeholder {
       flex-direction: column;
       justify-content: space-between;
       gap: 3rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .container_info .features_container_list {
+          width: 30rem; } }
       @media only screen and (max-width: 37.5rem) {
         .container_info .features_container_list {
           width: 30rem;
-          height: 37.8rem; } }
+          height: 37.8rem;
+          position: absolute;
+          top: 30rem; } }
 
 .footer {
   width: 144rem;
@@ -309,6 +437,10 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   color: var(--color-white); }
+  @media only screen and (max-width: 76.8rem) {
+    .footer {
+      width: 76.8rem;
+      margin: 0; } }
   @media only screen and (max-width: 37.5rem) {
     .footer {
       width: 37.5rem;
@@ -364,8 +496,19 @@ textarea::placeholder {
   flex-direction: row;
   margin: 0 auto;
   position: absolute;
-  top: 10.9rem;
+  top: 5rem;
   left: 42.9rem; }
+  @media only screen and (max-width: 37.5rem) {
+    .form {
+      width: 37.5rem;
+      height: 95rem; } }
+  @media only screen and (max-width: 76.8rem) {
+    .form {
+      left: 10rem; } }
+  @media only screen and (max-width: 37.5rem) {
+    .form {
+      left: 0;
+      top: 0; } }
   .form_input {
     padding: 0.9rem 3.7rem 5rem 4.6rem;
     background: var(--color-white);
@@ -377,33 +520,62 @@ textarea::placeholder {
       height: 10.2rem;
       margin: 4rem auto 2rem auto;
       text-align: center; }
+      @media only screen and (max-width: 37.5rem) {
+        .form_input_headline {
+          width: 30rem;
+          margin: 0;
+          margin-top: 7rem; } }
     .form_input_name {
       width: 46.8rem;
       height: 5.5rem;
       margin-bottom: 5.3rem; }
+      @media only screen and (max-width: 37.5rem) {
+        .form_input_name {
+          width: 20rem; } }
     .form_input_email_number {
       display: flex;
       flex-direction: row;
       gap: 2.4rem; }
+      @media only screen and (max-width: 37.5rem) {
+        .form_input_email_number {
+          flex-direction: column;
+          width: 20rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .form_input_website {
+        width: 20rem; } }
 
 .important {
   height: 44.4rem; }
-  @media only screen and (max-width: 37.5rem) {
+  @media only screen and (max-width: 76.8rem) {
     .important {
       height: 80.4rem; } }
+  @media only screen and (max-width: 37.5rem) {
+    .important {
+      height: 80.4rem;
+      margin-bottom: 18rem; } }
   .important_headline {
     width: 47.7rem;
     height: 17.4rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .important_headline {
+        width: 76.8rem;
+        height: 10rem;
+        text-align: center; } }
     @media only screen and (max-width: 37.5rem) {
       .important_headline {
-        width: 37.5rem;
+        width: 32.4rem;
         height: 11.5rem;
         font-size: 3.2rem;
-        margin-left: 3.2rem; } }
+        margin-left: 3.4rem;
+        margin-bottom: 5rem;
+        text-align: left; } }
   .important_info {
     display: flex;
     flex-direction: row;
     position: relative; }
+    @media only screen and (max-width: 76.8rem) {
+      .important_info {
+        flex-direction: column; } }
     @media only screen and (max-width: 37.5rem) {
       .important_info {
         flex-direction: column-reverse; } }
@@ -417,37 +589,62 @@ textarea::placeholder {
       height: 14.8rem;
       line-height: 4rem;
       margin-right: 6.5rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .important_info_text {
+          margin: 0 auto;
+          width: 76.8rem;
+          margin-right: 0; } }
       @media only screen and (max-width: 37.5rem) {
         .important_info_text {
           width: 37.5rem;
-          margin-left: 3.2rem;
+          margin-left: 2rem;
           margin-top: 45.6rem;
           font-size: 2.6rem; } }
       .important_info_text_description {
         margin-bottom: 7.3rem; }
+        @media only screen and (max-width: 76.8rem) {
+          .important_info_text_description {
+            width: 50rem;
+            text-align: center; } }
         @media only screen and (max-width: 37.5rem) {
           .important_info_text_description {
-            text-align: left; } }
-    .important_info .features_container {
-      position: relative; }
-      .important_info .features_container_list {
-        list-style: none;
-        font-size: 1.8rem;
-        line-height: 2.7rem;
-        width: 44rem;
-        height: 30.3rem;
-        position: absolute;
-        top: -4rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 3rem; }
-        @media only screen and (max-width: 37.5rem) {
-          .important_info .features_container_list {
-            width: 25.1rem;
-            margin-left: 3.6rem;
-            height: 45.6rem;
-            margin-bottom: 5rem; } }
+            text-align: left;
+            width: 30.7rem;
+            font-size: 2rem; } }
+      @media only screen and (max-width: 76.8rem) {
+        .important_info_text_btn {
+          width: 50rem;
+          text-align: center; } }
+      @media only screen and (max-width: 37.5rem) {
+        .important_info_text_btn {
+          width: 32.3rem; } }
+  .important_container {
+    position: relative; }
+    .important_container_list {
+      list-style: none;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      width: 44rem;
+      height: 30.3rem;
+      position: absolute;
+      top: -4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .important_container_list {
+          width: 76.8rem;
+          top: 15rem;
+          left: 17rem; } }
+      @media only screen and (max-width: 37.5rem) {
+        .important_container_list {
+          width: 25.1rem;
+          margin-left: 3.6rem;
+          height: 45.6rem;
+          margin-bottom: 5rem;
+          left: 0;
+          top: -4rem; } }
 
 .nav {
   width: 144rem;
@@ -455,6 +652,11 @@ textarea::placeholder {
   margin: 0 auto;
   background: linear-gradient(173deg, #3d2e80 55%, #c11d60 100%);
   color: var(--color-white); }
+  @media only screen and (max-width: 76.8rem) {
+    .nav {
+      width: 76.8rem;
+      position: relative;
+      margin: 0; } }
   @media only screen and (max-width: 37.5rem) {
     .nav {
       width: 37.5rem;
@@ -465,6 +667,9 @@ textarea::placeholder {
     flex-direction: row;
     justify-content: center;
     gap: 57.566rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .nav_top {
+        gap: 30rem; } }
     @media only screen and (max-width: 37.5rem) {
       .nav_top {
         gap: 1.9rem; } }
@@ -521,6 +726,10 @@ textarea::placeholder {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 10.8rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .results_info {
+        width: 76.8rem;
+        margin: 0; } }
     @media only screen and (max-width: 37.5rem) {
       .results_info {
         width: 37.5rem;
@@ -531,11 +740,19 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     margin-bottom: 4.9rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .results_1 {
+        width: 40rem;
+        margin-left: 5rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .results_1 {
+        width: 37.5rem;
+        margin-left: 0; } }
     .results_1_number {
       margin-right: 3.9rem; }
       @media only screen and (max-width: 37.5rem) {
         .results_1_number {
-          margin-left: 3.4rem; } }
+          margin-left: 3.7rem; } }
     .results_1_text {
       width: 36.4rem;
       height: 10rem;
@@ -556,15 +773,24 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     margin-bottom: 4.9rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .results_2 {
+        margin-right: 22.6rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .results_2 {
+        margin-right: 0; } }
     .results_2_number {
-      margin-right: 3.7rem; }
+      margin-right: 3.9rem; }
       @media only screen and (max-width: 37.5rem) {
         .results_2_number {
-          margin-left: 3.4rem; } }
+          margin-left: 3.7rem; } }
     .results_2_text {
       width: 39.4rem;
       height: 10rem;
       line-height: 2.8rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .results_2_text {
+          width: 40rem; } }
       @media only screen and (max-width: 37.5rem) {
         .results_2_text {
           width: 21.1rem;
@@ -575,6 +801,9 @@ textarea::placeholder {
       margin-right: 3.5rem;
       margin-left: 32.4rem;
       padding-top: 3.3rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .results_2_left {
+          margin-left: 22.4rem; } }
       @media only screen and (max-width: 37.5rem) {
         .results_2_left {
           display: none; } }
@@ -582,11 +811,19 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     margin-bottom: 4.9rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .results_3 {
+        width: 40rem;
+        margin-left: 5rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .results_3 {
+        width: 37.5rem;
+        margin-left: 0; } }
     .results_3_number {
       margin-right: 3.9rem; }
       @media only screen and (max-width: 37.5rem) {
         .results_3_number {
-          margin-left: 3.4rem; } }
+          margin-left: 3.7rem; } }
     .results_3_text {
       width: 36.4rem;
       height: 10rem;
@@ -607,20 +844,29 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     margin-bottom: 13.9rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .results_4 {
+        margin-bottom: 7rem; } }
     @media only screen and (max-width: 37.5rem) {
       .results_4 {
         margin-bottom: 3.8rem; } }
     .results_4_number {
       margin-right: 3.9rem;
       margin-left: 42.6rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .results_4_number {
+          margin-left: 32.6rem; } }
       @media only screen and (max-width: 37.5rem) {
         .results_4_number {
-          margin-left: 3.4rem; } }
+          margin-left: 3.7rem; } }
     .results_4_text {
       width: 36.4rem;
       height: 10rem;
       line-height: 2.8rem;
       margin-right: 3.3rem; }
+      @media only screen and (max-width: 76.8rem) {
+        .results_4_text {
+          width: 30rem; } }
       @media only screen and (max-width: 37.5rem) {
         .results_4_text {
           width: 21.1rem;
@@ -634,9 +880,17 @@ textarea::placeholder {
   gap: 7.9rem;
   margin-top: 13.2rem;
   margin-bottom: 10.4rem; }
+  @media only screen and (max-width: 76.8rem) {
+    .testimonials {
+      flex-direction: column;
+      margin-top: 8rem; } }
   @media only screen and (max-width: 37.5rem) {
     .testimonials {
-      flex-direction: column; } }
+      flex-direction: column;
+      margin-top: 6.5rem; } }
+  @media only screen and (max-width: 76.8rem) {
+    .testimonials_info {
+      width: 76.8rem; } }
   .testimonials_info_left {
     font-size: 1.6rem;
     border: 1px solid var(--color-grey);
@@ -645,6 +899,9 @@ textarea::placeholder {
     width: 42rem;
     height: 28.4rem;
     line-height: 3.2rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .testimonials_info_left {
+        margin: 0 auto; } }
     @media only screen and (max-width: 37.5rem) {
       .testimonials_info_left {
         width: 32.2rem;
@@ -660,6 +917,9 @@ textarea::placeholder {
     width: 42rem;
     height: 28.4rem;
     line-height: 3.2rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .testimonials_info_right {
+        margin: 0 auto; } }
     @media only screen and (max-width: 37.5rem) {
       .testimonials_info_right {
         width: 32.2rem;
@@ -672,6 +932,10 @@ textarea::placeholder {
     flex-direction: row;
     font-size: 1.6rem;
     margin-top: 3.4rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .testimonials_info .person {
+        width: 76.8rem;
+        margin-left: 18rem; } }
     @media only screen and (max-width: 37.5rem) {
       .testimonials_info .person {
         width: 37.5rem;
