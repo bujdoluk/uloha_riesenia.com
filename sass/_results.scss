@@ -1,0 +1,222 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_info {
+        width: 60rem;
+        height: 16.3rem;
+        line-height: 6.4rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10.8rem;
+
+        @media only screen and (max-width: $bp-tablet) {
+            width: 76.8rem;
+            margin: 0;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            width: 37.5rem;
+            height: 16.3rem;
+            line-height: 4.4rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &_1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4.9rem;
+
+        @media only screen and (max-width: $bp-tablet) {
+            width: 40rem;
+            margin-left: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            width: 37.5rem;
+            margin-left: 0;
+        }
+
+        &_number {
+            margin-right: 3.9rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                margin-left: 3.7rem;
+            }
+        }
+
+        &_text {
+            width: 36.4rem;
+            height: 10rem;
+            line-height: 2.8rem;
+            margin-right: 3.3rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                width: 21.1rem;
+                height: 10rem;
+                line-height: 2.8rem;
+                margin-bottom: 5.5rem;
+            }
+        }
+
+        &_right {
+            padding-top: 3.3rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &_2 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4.9rem;
+
+        @media only screen and (max-width: $bp-tablet) {
+            margin-right: 22.6rem;
+
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            margin-right: 0;
+
+        }
+
+        &_number {
+            margin-right: 3.9rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                margin-left: 3.7rem;
+            }
+
+        }
+
+        &_text {
+            width: 39.4rem;
+            height: 10rem;
+            line-height: 2.8rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                width: 40rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                width: 21.1rem;
+                height: 10rem;
+                line-height: 2.8rem;
+                margin-bottom: 5.5rem;
+            }
+
+        }
+
+        &_left {
+            margin-right: 3.5rem;
+            margin-left: 32.4rem;
+            padding-top: 3.3rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                margin-left: 22.4rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &_3 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4.9rem;
+
+        @media only screen and (max-width: $bp-tablet) {
+            width: 40rem;
+            margin-left: 5rem;
+        }
+
+
+        @media only screen and (max-width: $bp-mobile) {
+            width: 37.5rem;
+            margin-left: 0;
+        }
+
+        &_number {
+            margin-right: 3.9rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                margin-left: 3.7rem;
+            }
+        }
+
+        &_text {
+            width: 36.4rem;
+            height: 10rem;
+            line-height: 2.8rem;
+            margin-right: 3.3rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                width: 21.1rem;
+                height: 10rem;
+                line-height: 2.8rem;
+                margin-bottom: 5.5rem;
+            }
+        }
+
+        &_right {
+            padding-top: 3.3rem;
+
+            @media only screen and (max-width: $bp-mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &_4 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 13.9rem;
+
+        @media only screen and (max-width: $bp-tablet) {
+            margin-bottom: 7rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            margin-bottom: 3.8rem;
+        }
+
+        &_number {
+            margin-right: 3.9rem;
+            margin-left: 42.6rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                margin-left: 32.6rem;
+            }
+
+
+            @media only screen and (max-width: $bp-mobile) {
+                margin-left: 3.7rem;
+            }
+        }
+
+        &_text {
+            width: 36.4rem;
+            height: 10rem;
+            line-height: 2.8rem;
+            margin-right: 3.3rem;
+
+            @media only screen and (max-width: $bp-tablet) {
+                width: 30rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                width: 21.1rem;
+                height: 10rem;
+                line-height: 2.8rem;
+                margin-bottom: 5.5rem;
+            }
+        }
+    }
+}
