@@ -12,6 +12,10 @@
         width: 37.5rem;
     }
 
+    @media only screen and (max-width: $bp-minimum) {
+        width: 32rem;
+    }
+
     &_info {
         display: flex;
         flex-direction: row;
@@ -19,6 +23,10 @@
         @media only screen and (max-width: $bp-mobile) {
             flex-direction: column;
             height: 90rem;
+        }
+
+        @media only screen and (max-width: $bp-minimum) {
+            height: 80rem;
         }
 
         .info {
@@ -31,6 +39,11 @@
                 margin-left: 2rem;
                 margin-top: 16rem;
                 font-size: 2rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                width: 28rem;
+                margin-top: 12rem;
             }
 
 
@@ -56,6 +69,13 @@
                     line-height: 4.4rem;
                 }
 
+                @media only screen and (max-width: $bp-minimum) {
+                    width: 28rem;
+                    height: 6.4rem;
+                    line-height: 3.4rem;
+                    margin-bottom: 2rem;
+                }
+
             }
 
             &_bottom {
@@ -76,7 +96,14 @@
                     height: 20.3rem;
                     margin: 0 auto;
                     margin-bottom: 3.1rem;
-                    font-size: 2rem;
+                }
+
+                @media only screen and (max-width: $bp-minimum) {
+                    width: 28rem;
+                    margin-bottom: 3.1rem;
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    text-align: center;
                 }
             }
         }
@@ -90,10 +117,15 @@
 
             @media only screen and (max-width: $bp-mobile) {
                 margin: 0 auto;
-                width: 30rem;
                 position: absolute;
                 top: 45rem;
                 left: 2.9rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                width: 24rem;
+                top: 40rem;
+                left: 2rem;
             }
 
             &_logos {
@@ -116,9 +148,18 @@
                     flex-direction: row;
                 }
 
+                @media only screen and (max-width: $bp-minimum) {
+                    width: 28rem;
+                }
+
                 &_img {
                     @media only screen and (max-width: $bp-mobile) {
                         width: 13rem;
+                        flex-direction: row;
+                    }
+
+                    @media only screen and (max-width: $bp-minimum) {
+                        width: 12rem;
                         flex-direction: row;
                     }
                 }
@@ -142,10 +183,14 @@
                     }
 
                     @media only screen and (max-width: $bp-mobile) {
-                        width: 30rem;
                         height: 37.8rem;
                         position: absolute;
                         top: 30rem;
+                    }
+
+                    @media only screen and (max-width: $bp-minimum) {
+                        width: 28rem;
+                        top: 26rem;
                     }
 
                     display: flex;

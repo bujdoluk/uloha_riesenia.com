@@ -10,12 +10,12 @@
 }
 
 // Minimal resolution 320px
-$bp-minimum: 32rem;
+$bp-minimum: 20em;
 // Mobile version 375px
-$bp-mobile: 37.5rem;
+$bp-mobile: 23.4375em;
 // Tablet resolution 768px
-$bp-tablet: 76.8rem;
-// Desktop version 1440px
+$bp-tablet: 48em;
+
 
 *,
 *::before,
@@ -30,6 +30,7 @@ $bp-tablet: 76.8rem;
 
 html {
     /* 1rem = 10px */
+    /* 16px -> 100% 10px = 62.5%*/
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
@@ -42,8 +43,16 @@ body {
 .main {
     width: 144.0rem;
 
+    @media only screen and (max-width: $bp-tablet) {
+        width: 76.8rem;
+    }
+
     @media only screen and (max-width: $bp-mobile) {
         width: 37.5rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 32rem;
     }
 }
 
@@ -56,6 +65,10 @@ body {
     @media only screen and (max-width: $bp-mobile) {
         font-size: 3rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2.5rem;
+    }
 }
 
 .h2_32 {
@@ -66,12 +79,14 @@ body {
 
     @media only screen and (max-width: $bp-tablet) {
         font-size: 3.2rem;
-        font-weight: 700;
     }
 
     @media only screen and (max-width: $bp-mobile) {
         font-size: 3.2rem;
-        font-weight: 700;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
     }
 }
 
@@ -84,6 +99,10 @@ body {
     @media only screen and (max-width: $bp-mobile) {
         font-size: 2.4rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
 }
 
 .h3 {
@@ -95,11 +114,19 @@ body {
     @media only screen and (max-width: $bp-mobile) {
         font-size: 2.4rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
 }
 
 .h4 {
     font-size: 2.4rem;
     font-weight: 900;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
 }
 
 a {
@@ -117,6 +144,10 @@ a:hover {
 
     @media only screen and (max-width: $bp-mobile) {
         font-size: 2.2rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.8rem;
     }
 }
 
@@ -140,11 +171,6 @@ a:hover {
 
 .underline {
     border-bottom: 1.4rem solid var(--color-underline);
-
-    @media only screen and (max-width: $bp-mobile) {
-        border-bottom: 1.4rem solid var(--color-underline);
-    }
-
 }
 
 .bold {
@@ -206,6 +232,12 @@ a:hover {
     @media only screen and (max-width: $bp-mobile) {
         width: 32.3rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 26.3rem;
+        font-size: 1.6rem;
+        height: 6rem;
+    }
 }
 
 .btn_biggest {
@@ -217,6 +249,12 @@ a:hover {
 
     @media only screen and (max-width: $bp-mobile) {
         width: 28rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+        height: 6rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -248,17 +286,29 @@ li {
 .paragraph {
     font-size: 1.8rem;
     margin-left: 1rem;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.6rem;
+    }
 }
 
 .results_paragraph {
     font-size: 1.6rem;
     font-weight: 400;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.4rem;
+    }
 }
 
 label {
     font-size: 1.6rem;
     font-weight: 900;
     line-height: 3rem;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.4rem;
+    }
 }
 
 .error {
@@ -278,6 +328,16 @@ label {
     @media only screen and (max-width: $bp-mobile) {
         width: 28rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
+}
+
+input:focus {
+    outline: none !important;
+    border: 0.1rem solid var(--color-red);
+    box-shadow: 0 0 1rem var(--color-red-hover);
 }
 
 input::placeholder {
@@ -296,6 +356,10 @@ input::placeholder {
     @media only screen and (max-width: $bp-mobile) {
         width: 28rem;
     }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
 }
 
 textarea {
@@ -311,6 +375,16 @@ textarea {
         width: 28rem;
     }
 
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
+
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 0.1rem solid var(--color-red);
+    box-shadow: 0 0 1rem var(--color-red-hover);
 }
 
 textarea::placeholder {

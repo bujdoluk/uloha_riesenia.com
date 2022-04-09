@@ -22,6 +22,13 @@
             line-height: 4.4rem;
             margin-bottom: 3.5rem;
         }
+
+        @media only screen and (max-width: $bp-minimum) {
+            width: 32rem;
+            height: 8rem;
+            line-height: 3.4rem;
+            margin-bottom: 3.5rem;
+        }
     }
 
     &_1 {
@@ -39,11 +46,21 @@
             margin-left: 0;
         }
 
+        @media only screen and (max-width: $bp-minimum) {
+            width: 32rem;
+            margin-left: 0;
+            margin-bottom: 2rem
+        }
+
         &_number {
             margin-right: 3.9rem;
 
             @media only screen and (max-width: $bp-mobile) {
                 margin-left: 3.7rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                margin-left: 4.5rem;
             }
         }
 
@@ -55,6 +72,13 @@
 
             @media only screen and (max-width: $bp-mobile) {
                 width: 21.1rem;
+                height: 10rem;
+                line-height: 2.8rem;
+                margin-bottom: 5.5rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                width: 20rem;
                 height: 10rem;
                 line-height: 2.8rem;
                 margin-bottom: 5.5rem;
@@ -82,7 +106,10 @@
 
         @media only screen and (max-width: $bp-mobile) {
             margin-right: 0;
+        }
 
+        @media only screen and (max-width: $bp-mobile) {
+            margin-bottom: 2rem;
         }
 
         &_number {
@@ -90,6 +117,10 @@
 
             @media only screen and (max-width: $bp-mobile) {
                 margin-left: 3.7rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                margin-left: 3rem;
             }
 
         }
@@ -109,7 +140,6 @@
                 line-height: 2.8rem;
                 margin-bottom: 5.5rem;
             }
-
         }
 
         &_left {
@@ -140,6 +170,11 @@
 
         @media only screen and (max-width: $bp-mobile) {
             width: 37.5rem;
+            margin-left: 0;
+        }
+
+        @media only screen and (max-width: $bp-minimum) {
+            width: 32rem;
             margin-left: 0;
         }
 
@@ -187,6 +222,10 @@
             margin-bottom: 3.8rem;
         }
 
+        @media only screen and (max-width: $bp-minimum) {
+            margin-bottom: 6rem;
+        }
+
         &_number {
             margin-right: 3.9rem;
             margin-left: 42.6rem;
@@ -195,9 +234,12 @@
                 margin-left: 32.6rem;
             }
 
-
             @media only screen and (max-width: $bp-mobile) {
                 margin-left: 3.7rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                margin-left: 3rem;
             }
         }
 

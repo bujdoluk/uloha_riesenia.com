@@ -10,6 +10,10 @@
         margin-bottom: 18rem;
     }
 
+    @media only screen and (max-width: $bp-minimum) {
+        height: 68rem;
+    }
+
     &_headline {
         width: 47.7rem;
         height: 17.4rem;
@@ -27,6 +31,11 @@
             margin-left: 3.4rem;
             margin-bottom: 5rem;
             text-align: left;
+        }
+
+        @media only screen and (max-width: $bp-minimum) {
+            width: 26rem;
+            text-align: center;
         }
     }
 
@@ -68,6 +77,10 @@
                 font-size: 2.6rem;
             }
 
+            @media only screen and (max-width: $bp-mobile) {
+                line-height: 2.5rem;
+            }
+
             &_description {
                 margin-bottom: 7.3rem;
 
@@ -81,6 +94,13 @@
                     width: 30.7rem;
                     font-size: 2rem;
                 }
+
+                @media only screen and (max-width: $bp-minimum) {
+                    text-align: center;
+                    width: 28rem;
+                    font-size: 1.8rem;
+                    margin-bottom: 3rem;
+                }
             }
 
             &_btn {
@@ -91,6 +111,10 @@
 
                 @media only screen and (max-width: $bp-mobile) {
                     width: 32.3rem;
+                }
+
+                @media only screen and (max-width: $bp-minimum) {
+                    width: 28rem;
 
                 }
             }
@@ -123,6 +147,10 @@
                 margin-bottom: 5rem;
                 left: 0;
                 top: -4rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                top: -7rem;
             }
 
             display: flex;

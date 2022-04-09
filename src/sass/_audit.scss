@@ -1,3 +1,4 @@
+$bp-minimum: 32rem;
 $bp-mobile: 37.5rem;
 $bp-tablet: 76.8rem;
 
@@ -8,10 +9,6 @@ $bp-tablet: 76.8rem;
     @media only screen and (max-width: $bp-tablet) {
         flex-direction: column;
         margin: 0 auto;
-    }
-
-    @media only screen and (max-width: $bp-mobile) {
-        flex-direction: column;
     }
 
     &_left {
@@ -35,6 +32,15 @@ $bp-tablet: 76.8rem;
             font-size: 2.2rem;
             text-align: left;
         }
+
+        @media only screen and (max-width: $bp-minimum) {
+            width: 28rem;
+            height: 12.3rem;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            text-align: center;
+
+        }
     }
 
     &_right {
@@ -53,6 +59,10 @@ $bp-tablet: 76.8rem;
             margin: 0 auto;
             width: 32.3rem;
             margin-left: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-minimum) {
+            width: 28rem;
         }
     }
 }

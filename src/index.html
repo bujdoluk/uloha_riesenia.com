@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./sass/main.scss">
     <link rel="shortcut icon" type="image/ico" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>UX audit - Riesenia.com</title>
@@ -249,8 +249,8 @@
             <footer class="footer">
                 <h2 class="h2_24 footer_headline">Máte otázky? Jednoducho sa spýtajte.</h2>
                 <div class="footer_info">
-                    <p class="footer_info_phone">+421 (02) 555 65 726</p>
-                    <p><a class="a_22" href="#">uxdesign@riesenia.com</a></p>
+                    <div class="footer_info_phone">+421 (02) 555 65 726</div>
+                    <div class="footer_info_link"><a class="a_22" href="#">uxdesign@riesenia.com</a></div>
                 </div>
                 <div class="footer_info_logo">
                     <img src="./images/riesenia.jpg" alt="riesenia logo">
@@ -286,7 +286,7 @@
                     </div>
                     <div>
                         <label for="phone_number">Tel. číslo:</label>
-                        <input id="phone_number" class="input_email_number" type="number" required>
+                        <input id="phone_number" class="input_email_number" type="text" required>
                     </div>
                 </div>
 

@@ -7,6 +7,11 @@
         height: 95rem;
     }
 
+    @media only screen and (max-width: $bp-minimum) {
+        width: 32rem;
+        height: 95rem;
+    }
+
     display: none;
     flex-direction: row;
     margin: 0 auto;
@@ -39,6 +44,12 @@
 
             @media only screen and (max-width: $bp-mobile) {
                 width: 30rem;
+                margin: 0;
+                margin-top: 7rem;
+            }
+
+            @media only screen and (max-width: $bp-minimum) {
+                width: 24rem;
                 margin: 0;
                 margin-top: 7rem;
             }
