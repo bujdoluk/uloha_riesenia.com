@@ -605,7 +605,7 @@ textarea::placeholder {
 
 .form {
   width: 54.7rem;
-  height: 100rem;
+  height: 105rem;
   display: none;
   flex-direction: row;
   margin: 0 auto;
@@ -615,11 +615,11 @@ textarea::placeholder {
   @media only screen and (max-width: 23.4375em) {
     .form {
       width: 37.5rem;
-      height: 115rem; } }
+      height: 124rem; } }
   @media only screen and (max-width: 20em) {
     .form {
       width: 32rem;
-      height: 115rem; } }
+      height: 124rem; } }
   @media only screen and (max-width: 48em) {
     .form {
       left: 10rem; } }
@@ -627,44 +627,44 @@ textarea::placeholder {
     .form {
       left: 0;
       top: 0; } }
-  .form_input {
+  .form_inputs {
     padding: 0.9rem 3.7rem 5rem 4.6rem;
     background: var(--color-white);
     margin: 0 auto;
     -webkit-box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.29);
     box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.29); }
-    .form_input_headline {
+    .form_inputs_headline {
       width: 38rem;
       height: 10.2rem;
       margin: 4rem auto 2rem auto;
       text-align: center; }
       @media only screen and (max-width: 23.4375em) {
-        .form_input_headline {
+        .form_inputs_headline {
           width: 30rem;
           margin: 0;
           margin-top: 7rem; } }
       @media only screen and (max-width: 20em) {
-        .form_input_headline {
+        .form_inputs_headline {
           width: 24rem;
           margin: 0;
           margin-top: 7rem; } }
-    .form_input_name {
+    .form_inputs_name {
       width: 46.8rem;
       height: 5.5rem;
       margin-bottom: 5.3rem; }
       @media only screen and (max-width: 23.4375em) {
-        .form_input_name {
+        .form_inputs_name {
           width: 20rem; } }
-    .form_input_email_number {
+    .form_inputs_email_number {
       display: flex;
       flex-direction: row;
       gap: 2.4rem; }
       @media only screen and (max-width: 23.4375em) {
-        .form_input_email_number {
+        .form_inputs_email_number {
           flex-direction: column;
           width: 20rem; } }
     @media only screen and (max-width: 23.4375em) {
-      .form_input_website {
+      .form_inputs_website {
         width: 20rem; } }
   .form_wrapper_captcha {
     display: flex;
@@ -682,9 +682,14 @@ textarea::placeholder {
       height: 100%;
       width: 34.5rem;
       user-select: none;
-      background: #000;
+      color: var(--color-black);
       border-radius: 0.5rem;
-      position: relative; }
+      position: relative;
+      background-image: url(/captcha-bg.67571e6e.png);
+      font-size: 3rem;
+      text-align: center;
+      padding-top: 1.2rem;
+      font-family: 'Noto Serif', serif; }
       @media only screen and (max-width: 23.4375em) {
         .form_wrapper_captcha_img {
           width: 20rem; } }
@@ -692,7 +697,7 @@ textarea::placeholder {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         opacity: 0.95; }
       .form_wrapper_captcha_img span {
         position: absolute;
@@ -702,10 +707,9 @@ textarea::placeholder {
         color: var(--color-white);
         font-size: 3.5rem;
         text-align: center;
-        letter-spacing: 10px;
+        letter-spacing: 1rem;
         transform: translate(-50%, -50%);
-        text-shadow: 0 0 0.2rem #b1b1b1;
-        font-family: 'Noto Serif', serif; }
+        text-shadow: 0 0 0.2rem #b1b1b1; }
     .form_wrapper_captcha_reloadbutton {
       width: 7.5rem;
       height: 100%;
@@ -720,7 +724,7 @@ textarea::placeholder {
     .form_wrapper_captcha button {
       outline: none;
       border: none;
-      color: #fff;
+      color: var(--color-white);
       cursor: pointer;
       background: var(--color-red);
       border-radius: 0.5rem;
@@ -778,10 +782,20 @@ textarea::placeholder {
     .form_wrapper_input .checkbutton:hover {
       background-color: var(--color-red-hover); }
   .form_wrapper_status {
+    width: 46.8rem;
     display: none;
     font-size: 1.8rem;
-    text-align: center;
-    margin: 2rem 0 -0.5rem; }
+    padding: 2rem;
+    text-align: center; }
+    @media only screen and (max-width: 48em) {
+      .form_wrapper_status {
+        width: 46.8rem; } }
+    @media only screen and (max-width: 23.4375em) {
+      .form_wrapper_status {
+        width: 28rem; } }
+    @media only screen and (max-width: 20em) {
+      .form_wrapper_status {
+        width: 22rem; } }
 
 .important {
   height: 44.4rem; }

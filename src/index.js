@@ -1,17 +1,29 @@
+const form = document.getElementById("form")
+const content = document.getElementById("content")
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
+const close = document.getElementById("close");
 
-function toggleOn() {
-    document.getElementById("form").style.display = "flex";
-    document.getElementById("content").style.opacity = "0.2";
-}
+buttons = new Array;
+buttons.push(btn1);
+buttons.push(btn2);
+buttons.push(btn3);
 
-function toggleOff() {
-    document.getElementById("form").style.display = "none";
-    document.getElementById("content").style.opacity = "1";
-}
+buttons.forEach(btn => btn.addEventListener("click", () => {
+    form.style.display = "flex";
+    content.style.opacity = "0.2";
+}));
 
-const captcha = document.querySelector(".form_wrapper_captcha"),
+close.addEventListener("click", () => {
+    form.style.display = "none";
+    content.style.opacity = "1";
+});
+
+
+const captcha = document.querySelector(".form_wrapper_captcha_img"),
     reloadBtn = document.querySelector(".form_wrapper_captcha_reloadbutton"),
-    inputField = document.querySelector(".form_wrapper_input"),
+    inputField = document.querySelector(".form_wrapper_input input"),
     checkBtn = document.querySelector(".checkbutton"),
     statusTxt = document.querySelector(".form_wrapper_status");
 
@@ -39,15 +51,15 @@ checkBtn.addEventListener("click", e => {
     //adding space after each character of user entered values because I've added spaces while generating captcha
     let inputVal = inputField.value.split('').join(' ');
     if (inputVal == captcha.innerText) { //if captcha matched
-        statusTxt.style.color = "#4db2ec";
-        statusTxt.innerText = "Nice! You don't appear to be a robot.";
+        statusTxt.style.color = "#EE325C";
+        statusTxt.innerText = "Pekne! Nevyzeráš že by si bol robot :)";
         setTimeout(() => { //calling removeContent & getCaptcha after 4 seconds
             removeContent();
             getCaptcha();
         }, 2000);
     } else {
         statusTxt.style.color = "#ff0000";
-        statusTxt.innerText = "Captcha not matched. Please try again!";
+        statusTxt.innerText = "Captcha je nesprávne zadaná. Skús znova!";
     }
 });
 
