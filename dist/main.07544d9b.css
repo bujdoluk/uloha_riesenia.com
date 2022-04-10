@@ -169,7 +169,8 @@ a:hover {
 .a_22 {
   text-decoration: none;
   color: var(--color-red);
-  font-size: 3rem; }
+  font-size: 3rem;
+  cursor: pointer; }
   @media only screen and (max-width: 23.4375em) {
     .a_22 {
       font-size: 2.2rem; } }
@@ -183,7 +184,8 @@ a:hover {
 .a_16 {
   text-decoration: none;
   color: var(--color-red);
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  cursor: pointer; }
   @media only screen and (max-width: 23.4375em) {
     .a_16 {
       font-size: 1.6rem; } }
@@ -213,11 +215,16 @@ a:hover {
   top: 2.9rem;
   cursor: pointer; }
 
+.red_circle:hover {
+  background-color: var(--color-red-hover);
+  transform: scale(1.1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
 .white_cross {
   font-weight: 400;
   position: absolute;
-  top: 1.1rem;
-  left: 1.6rem;
+  top: 0.9rem;
+  left: 1.5rem;
   font-size: 1.7rem; }
 
 .btn {
@@ -287,14 +294,6 @@ li {
   font-weight: 600;
   display: flex;
   flex-direction: row; }
-
-.ok_marker {
-  width: 2.4rem;
-  height: 2.4rem;
-  padding-left: 0.7rem;
-  border-radius: 50%;
-  background: var(--color-green);
-  color: var(--color-white); }
 
 .paragraph {
   font-size: 1.8rem;
@@ -747,7 +746,8 @@ textarea::placeholder {
       position: relative;
       border-radius: 0.4rem;
       border: 0.1rem solid var(--color-grey);
-      cursor: pointer; }
+      cursor: pointer;
+      font-size: 2rem; }
       @media only screen and (max-width: 23.4375em) {
         .form_wrapper_input input {
           width: 28rem; } }

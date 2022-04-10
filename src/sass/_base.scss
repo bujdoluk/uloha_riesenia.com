@@ -162,6 +162,7 @@ a:hover {
     text-decoration: none;
     color: var(--color-red);
     font-size: 3rem;
+    cursor: pointer;
 
     @media only screen and (max-width: $bp-mobile) {
         font-size: 2.2rem;
@@ -180,6 +181,7 @@ a:hover {
     text-decoration: none;
     color: var(--color-red);
     font-size: 1.6rem;
+    cursor: pointer;
 
     @media only screen and (max-width: $bp-mobile) {
         font-size: 1.6rem;
@@ -188,6 +190,7 @@ a:hover {
 
 .a_16:hover {
     color: var(--color-red-hover);
+
 }
 
 .underline {
@@ -217,11 +220,17 @@ a:hover {
     cursor: pointer;
 }
 
+.red_circle:hover {
+    background-color: var(--color-red-hover);
+    transform: scale(1.1);
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .white_cross {
     font-weight: 400;
     position: absolute;
-    top: 1.1rem;
-    left: 1.6rem;
+    top: 0.9rem;
+    left: 1.5rem;
     font-size: 1.7rem;
 }
 
@@ -304,15 +313,6 @@ li {
     font-weight: 600;
     display: flex;
     flex-direction: row;
-}
-
-.ok_marker {
-    width: 2.4rem;
-    height: 2.4rem;
-    padding-left: 0.7rem;
-    border-radius: 50%;
-    background: var(--color-green);
-    color: var(--color-white);
 }
 
 .paragraph {
