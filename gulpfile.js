@@ -10,6 +10,8 @@ const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('gulp4-run-sequence');
 
+/* Converting css files to scss and putting them into dist folder*/
+
 gulp.task('sass', async () => {
     return gulp.src('app/scss/*.scss')
         .pipe(sass())
@@ -19,6 +21,8 @@ gulp.task('sass', async () => {
         }))
 });
 
+/* Live sync with server */
+
 gulp.task('browserSync', async () => {
     browserSync.init({
         server: {
@@ -26,6 +30,8 @@ gulp.task('browserSync', async () => {
         },
     })
 })
+
+/* Minifying and adding js, cssm html files to dist folder */
 
 gulp.task('useref', async () => {
     return gulp.src('app/*.html')
@@ -35,6 +41,8 @@ gulp.task('useref', async () => {
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
 });
+
+/* Putting fonts into dist folder */
 
 gulp.task('fonts', async () => {
     return gulp.src('app/fonts/*')
@@ -50,9 +58,13 @@ gulp.task('fonts', async () => {
 //         .pipe(gulp.dest('dist/images'))
 // });
 
+/* Delete files from dist folder */
+
 gulp.task('clean:dist', async () => {
     return del.sync('dist');
 })
+
+/* Watch changes in files */
 
 gulp.task('watch', async () => {
     gulp.watch('app/scss/*.scss', gulp.series('sass'));
@@ -61,12 +73,16 @@ gulp.task('watch', async () => {
     gulp.watch('app/js/*.js', browserSync.reload);
 })
 
+/* Build webpage for production */
+
 gulp.task('build', (callback) => {
     runSequence('clean:dist',
         gulp.series(['sass', 'useref', 'fonts', async (done) => done]),
         callback
     )
 })
+
+/* Default Build => Building just sass, watch for development */
 
 gulp.task('default', function (callback) {
     runSequence(
