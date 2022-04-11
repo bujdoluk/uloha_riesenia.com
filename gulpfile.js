@@ -13,7 +13,7 @@ const runSequence = require('gulp4-run-sequence');
 gulp.task('sass', async () => {
     return gulp.src('app/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
