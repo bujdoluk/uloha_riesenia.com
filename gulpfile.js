@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('gulp4-run-sequence');
+const minify = require('gulp-minify');
 
 /* Converting css files to scss and putting them into dist folder*/
 
@@ -31,7 +32,7 @@ gulp.task('browserSync', async () => {
     })
 })
 
-/* Minifying and adding js, cssm html files to dist folder */
+/* Adding html to dist folder and concatinating multiple js, css files together */
 
 gulp.task('useref', async () => {
     return gulp.src('app/*.html')
@@ -40,6 +41,14 @@ gulp.task('useref', async () => {
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
+});
+
+/* Minify js and add it to dist folder*/
+
+gulp.task('js', async () => {
+    gulp.src('app/js/*.js')
+        .pipe(minify())
+        .pipe(gulp.dest('dist/js'))
 });
 
 /* Putting fonts into dist folder */
@@ -79,7 +88,7 @@ gulp.task('watch', async () => {
 
 gulp.task('build', (callback) => {
     runSequence('clean:dist',
-        gulp.series(['sass', 'useref', 'images', 'fonts', async (done) => done]),
+        gulp.series(['sass', 'useref', 'images', 'js', 'fonts', async (done) => done]),
         callback
     )
 })
