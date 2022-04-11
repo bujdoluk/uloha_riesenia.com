@@ -1,0 +1,449 @@
+@use 'sass:math';
+
+:root {
+    --color-red: #EE325C;
+    --color-red-hover: #ae1e3e;
+    --color-white: #fff;
+    --color-grey: #D6D8DD;
+    --color--input-grey: #EFEFEF;
+    --color-black: #000;
+    --color-green: #6BBC13;
+    --color-underline: rgba(238, 50, 92, 0.2);
+}
+
+/* Resolution */
+
+// Minimal resolution 320px
+$bp-minimum: 20em;
+// Mobile version 375px
+$bp-mobile: 23.4375em;
+// Tablet resolution 768px
+$bp-tablet: 48em;
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 1rem = 10px */
+    /* 16px -> 100% 10px = 62.5%*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+.main {
+    width: 144.0rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+        width: 76.8rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 37.5rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 32rem;
+    }
+}
+
+.container {
+    width: 92rem;
+    margin: 0 auto;
+    margin-top: 7.5rem;
+    margin-bottom: 20.5rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 37.5rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 32rem;
+    }
+}
+
+/* Elements */
+
+.h1 {
+    font-size: 5rem;
+    font-weight: 900;
+
+    animation: pop-in 2s cubic-bezier(0, 0.5, 0, 1) forwards;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2.5rem;
+    }
+}
+
+.h2_32 {
+    font-size: 4.8rem;
+    font-weight: 700;
+
+    animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+
+    @media only screen and (max-width: $bp-tablet) {
+        font-size: 3.2rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 3.2rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
+}
+
+.h2_24 {
+    font-size: 4.8rem;
+    font-weight: 700;
+
+    animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
+}
+
+.h3 {
+    font-size: 3rem;
+    font-weight: 900;
+
+    animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
+}
+
+.h4 {
+    font-size: 2.4rem;
+    font-weight: 900;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 2rem;
+    }
+}
+
+a {
+    color: var(--color-red);
+}
+
+a:hover {
+    color: var(--color-red-hover);
+}
+
+.a_22 {
+    text-decoration: none;
+    color: var(--color-red);
+    font-size: 3rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 2.2rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.8rem;
+    }
+}
+
+.a_22:hover {
+    color: var(--color-red-hover);
+}
+
+.a_16 {
+    text-decoration: none;
+    color: var(--color-red);
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.a_16:hover {
+    color: var(--color-red-hover);
+
+}
+
+.underline {
+    border-bottom: 1.4rem solid var(--color-underline);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+.red_circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    position: relative;
+
+    position: absolute;
+    right: 2rem;
+    top: 2.9rem;
+    cursor: pointer;
+}
+
+.red_circle:hover {
+    background-color: var(--color-red-hover);
+    transform: scale(1.1);
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.white_cross {
+    font-weight: 400;
+    position: absolute;
+    top: 0.9rem;
+    left: 1.5rem;
+    font-size: 1.7rem;
+}
+
+.btn {
+    border-radius: 0.8rem;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-red-hover);
+}
+
+.btn_small {
+    width: 20rem;
+    height: 4.2rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    transition: all .2s ease-in-out;
+}
+
+.btn_small:hover {
+    transform: scale(1.1);
+}
+
+.btn_big {
+    width: 38rem;
+    height: 7.2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 32.3rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 26.3rem;
+        font-size: 1.6rem;
+        height: 6rem;
+    }
+}
+
+.btn_big:hover {
+    transform: scale(1.05);
+}
+
+.btn_biggest {
+    width: 46.8rem;
+    height: 7.2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 5rem;
+    transition: all .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 28rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+        height: 6rem;
+        font-size: 1.6rem;
+    }
+}
+
+.quotes {
+    width: 4.3rem;
+    height: 3.6rem;
+    transform: scale(1000%);
+    color: var(--color-black);
+    position: absolute;
+    top: 2.5rem;
+    left: 21rem;
+}
+
+li {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+
+.paragraph {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.6rem;
+    }
+}
+
+.results_paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.4rem;
+    }
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 3rem;
+
+    @media only screen and (max-width: $bp-minimum) {
+        font-size: 1.4rem;
+    }
+}
+
+.error {
+    color: var(--color-red);
+    font-size: 1.6rem;
+}
+
+.input {
+    width: 46.8rem;
+    height: 5.5rem;
+    background-color: var(--color--input-grey);
+    border: 0;
+    border-radius: 0.4rem;
+    margin-bottom: 3.3rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 28rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
+}
+
+input:focus {
+    outline: none !important;
+    border: 0.1rem solid var(--color-red);
+    box-shadow: 0 0 1rem var(--color-red-hover);
+}
+
+input::placeholder {
+    font-size: 1.6rem;
+}
+
+.input_email_number {
+    width: 22rem;
+    height: 5.5rem;
+    background-color: var(--color--input-grey);
+    border: 0;
+    border-radius: 0.4rem;
+    margin-bottom: 3.3rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 28rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
+}
+
+textarea {
+    width: 46.8rem;
+    height: 12.7rem;
+    margin-bottom: 2.3rem;
+    background-color: var(--color--input-grey);
+    border: 0;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        width: 28rem;
+    }
+
+    @media only screen and (max-width: $bp-minimum) {
+        width: 22rem;
+    }
+
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 0.1rem solid var(--color-red);
+    box-shadow: 0 0 1rem var(--color-red-hover);
+}
+
+textarea::placeholder {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+/* Animations */
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem) scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Testing gulp */
+.testing {
+    width: math.div(5, 7);
+}
