@@ -8,6 +8,7 @@ const cssnano = require('gulp-cssnano');
 //const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
+const runSequence = require('gulp4-run-sequence');
 
 gulp.task('sass', async () => {
     return gulp.src('app/scss/*.scss')
@@ -60,3 +61,9 @@ gulp.task('watch', async () => {
     gulp.watch('app/js/*.js', browserSync.reload);
 })
 
+gulp.task('build', (callback) => {
+    runSequence('clean:dist',
+        gulp.series(['sass', 'useref', 'fonts', async (done) => done]),
+        callback
+    )
+})
