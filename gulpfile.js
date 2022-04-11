@@ -67,3 +67,10 @@ gulp.task('build', (callback) => {
         callback
     )
 })
+
+gulp.task('default', function (callback) {
+    runSequence(
+        gulp.series(['sass', 'watch', async (done) => done]),
+        callback
+    )
+})
