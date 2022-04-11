@@ -5,7 +5,7 @@ const useref = require('gulp-useref');
 const uglify = require('gulp-uglify');
 const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
-//const imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('gulp4-run-sequence');
@@ -49,14 +49,16 @@ gulp.task('fonts', async () => {
         .pipe(gulp.dest('dist/fonts'))
 })
 
-// gulp.task('images', async () => {
-//     return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-//         // Caching images that ran through imagemin
-//         .pipe(cache(imagemin({
-//             interlaced: true
-//         })))
-//         .pipe(gulp.dest('dist/images'))
-// });
+/* Optimizing images */
+
+gulp.task('images', async () => {
+    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+        // Caching images that ran through imagemin
+        .pipe(cache(imagemin({
+            interlaced: true
+        })))
+        .pipe(gulp.dest('dist/images'))
+});
 
 /* Delete files from dist folder */
 
@@ -77,7 +79,7 @@ gulp.task('watch', async () => {
 
 gulp.task('build', (callback) => {
     runSequence('clean:dist',
-        gulp.series(['sass', 'useref', 'fonts', async (done) => done]),
+        gulp.series(['sass', 'useref', 'images', 'fonts', async (done) => done]),
         callback
     )
 })
