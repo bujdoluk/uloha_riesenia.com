@@ -623,7 +623,7 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.0.0",
     "sass": "^1.22.10"
   },
   "scripts": {
